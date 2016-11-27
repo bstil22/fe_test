@@ -1,0 +1,27 @@
+#root {
+  margin: 5%;
+  width: 90%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-container {
+	display: flex;
+	align-items: center;
+	overflow: scroll;
+	width: 95%
+}
+
+.half {
+  margin-right: 20px;
+  width: 40%;
+  align-content: space-between;
+}
+
+.rd3-barchart-xaxis .tick {
+	display: none;
+}
