@@ -1,3 +1,3 @@
-module.exports = function (...mutations) {
+module.exports = function(...mutations) {
   return Object.assign({}, ...mutations);
 };
