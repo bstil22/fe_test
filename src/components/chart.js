@@ -1,21 +1,21 @@
 import React from 'react';
-import rd3 from 'rd3';
+import { BarChart } from 'rd3';
 
 export default class Chart extends React.Component {
-  render() {
-    const BarChart = rd3.BarChart;
-    const values = this.props.data;
-    const formattedValues = values.map((val, i) => {
+  values() {
+    const data = this.props.data.map((val, i) => {
       return { x: i, y: parseFloat(val) };
     });
-    const barChartData = [{ name: 'Values', values: formattedValues }];
+    return [{ name: 'Values', values: data }]
+  }
+  render() {
     return (
       <BarChart
-        data={barChartData}
+        data={this.values()}
         width={2000}
         height={300}
         title="Random Numbers"
-        gridHorizontal={true}
+        gridHorizontal
         colors={() => {
           return 'darkorange';
         }}
